@@ -36,7 +36,15 @@ function clearCompletedTasks() {
             displayTasks();
 }
 
+function clearAllTasks() {
+            tasks = tasks.forEach((task) => {
+                task.completed=false;
+            })
+            displayTasks();
+}
+
 addTaskBtn.addEventListener("click", addTask);
 clearCompletedBtn.addEventListener("click", clearCompletedTasks);
+clearAllBtn.addEventListener("click", clearAllTasks);
 
  displayTasks();
